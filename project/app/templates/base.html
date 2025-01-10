@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .nav{
+            height: 70px;
+            width: 100%;
+            background-color: rgb(151, 207, 207);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+    
+        }
+        footer {
+    background-color:black;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-info, .quick-links, .social-links {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.contact-info h4, .quick-links h4, .social-links h4 {
+    margin-bottom: 10px;
+}
+
+.contact-info p, .quick-links ul {
+    margin: 5px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.social-links .social-icon {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.social-links .social-icon i {
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-links li {
+    margin: 5px 0;
+}
+
+.footer-copyright {
+    border-top: 1px solid #777;
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    footer .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .footer-section {
+        margin-bottom: 20px;
+    }
+
+    footer .social-media a {
+        margin-right: 10px;
+    }
+}
+    
+    
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="nav">
+       
+        <a href='{% url "home" %}'>HOME</a>
+        <a href='{% url "about" %}'>ABOUT</a>
+        <a href='{% url "contact" %}'>CONTACT</a>
+        <a href='{% url "register" %}'>REGISTER</a>
+        <a href='{% url "login" %}'>LOGIN</a>
+        </div>
+        <div style="height: 35vh; width: 35px;"></div>
+
+        
+    </div>
+
+    
+    {% block content %}
+         
+    {% endblock %}
+    
+        <footer>
+            <div class="footer-container">
+                
+                <div class="contact-info">
+                    <h4>Contact Us</h4>
+                   <p>Email: <a href="contact@gamezone.com">contact@gamezone.com</a></p>
+                    <p>Phone: +91-9876543210</p>
+                    <p>Address: Bhopal, MadhyaPradesh</p>
+                </div>
+        
+                <div class="quick-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+        
+                <div class="social-links">
+                    <h4>Follow Us</h4>
+                    <div>
+                        <a href="https://facebook.com" target="_blank" class="social-icon">
+                            <i class="fab fa-facebook-square"></i> Facebook
+                        </a><br>
+                        <a href="https://instagram.com" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a><br>
+                        <a href="https://twitter.com" target="_blank" class="social-icon">
+                            <i class="fab fa-twitter"></i> Twitter
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="footer-copyright">
+                <p>&copy; 2024 Game Zone. All Rights Reserved.</p>
+                <p>By Dhruv</p>
+            </div>
+        </footer>
+</body>
+</html>

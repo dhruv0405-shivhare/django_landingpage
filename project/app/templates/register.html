@@ -1,34 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <style>
-        .nav{
-            height: 70px;
-            width: 100%;
-            background-color: aqua;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-    
-        }
-    
-    
-    </style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+{% extends 'base.html' %}
 
-<body>
-    <div class="nav">
-       
-        <a href='{% url "home" %}'>HOME</a>
-        <a href='{% url "about" %}'>ABOUT</a>
-        <a href='{% url "contact" %}'>CONTACT</a>
-        <a href='{% url "register" %}'>REGISTER</a>
-        <a href='{% url "login" %}'>LOGIN</a>
-        </div>
-
-        <h1>THIS IS REGISTER PAGE</h1>
-
-</body>
-</html>
+{% block content %}
+<h1 style="align-items: center; text-align: center; margin-bottom: 50px">this is register page</h1>
+{% endblock %}
